@@ -4,10 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>耀文行動商城 - 專屬選品測驗 | 2026流年運勢分析</title>
+    <title>耀文行動商城 - 專屬購物問卷 | 2026流年運勢分析</title>
 
     <!-- SEO Meta Tags -->
     <meta name="description" content="透過潛意識購物測驗，了解您的消費性格與2026流年運勢。專業生命靈數分析，為您推薦最適合的商品。">
+
+    <!-- [NEW] 社群分享預覽設定 (Open Graph) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://randytsay.github.io/questionnaire/">
+    <meta property="og:title" content="耀文行動商城 - 2026流年運勢 & 選品測驗">
+    <meta property="og:description" content="透過潛意識測驗，了解您的消費性格與2026流年運勢。馬上測測看！">
+    <meta property="og:image" content="https://randytsay.github.io/questionnaire/images/preview.jpg">
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://randytsay.github.io/questionnaire/">
+    <meta property="twitter:title" content="耀文行動商城 - 2026流年運勢 & 選品測驗">
+    <meta property="twitter:description" content="透過潛意識測驗，了解您的消費性格與2026流年運勢。馬上測測看！">
+    <meta property="twitter:image" content="https://randytsay.github.io/questionnaire/images/preview.jpg">
+
+    <!-- [NEW] 網頁圖標 (Favicon - 紫色購物袋) -->
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPCEtLS Purple Circle Background --+CiAgPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMzIiIGZpbGw9IiM3YzNhZWQiLz4KICA8IS0tIFNob3BwaW5nIEJhZyBoYW5kbGUgLS0+CiAgPHBhdGggZD0iTTI0IDI1IEMyNCAxNiAzMiAxNiAzMiAxNiBTNDAgMTYgNDAgMjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPCEtLSBTaG9wcGluZyBCYWcgQm9keSAtLT4KICA8cmVjdCB4PSIxOCIgeT0iMjUiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjQiIGZpbGw9IndoaXRlIi8+CiAgPCEtLSBNYWdpYyBTdGFyIC0tPgogIDxwYXRoIGQ9Ik0zMiAzMiBMMzQgMzYgTDM4IDM2IEwzNSAzOSBMMzYgNDMgTDMyIDQwIEwyOCA0MyBMMjkgMzkgTDI2IDM2IEwzMCAzNiBaIiBmaWxsPSIjN2MzYWVkIi8+Cjwvc3ZnPg==" type="image/svg+xml">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -224,18 +241,30 @@
                 action="https://docs.google.com/forms/d/e/1FAIpQLSehmsVa_hZXpzUULczgp6SHdwMWP_1pwOMmd7CYhHSmT8glCA/formResponse"
                 method="POST" target="hidden_iframe" onsubmit="submitted=true;">
 
+                <!-- Google Form Verification Tokens (FIXED) -->
+                <input type="hidden" name="fvv" value="1">
+                <input type="hidden" name="fbzx" value="3332142635860987282">
+                <input type="hidden" name="pageHistory" value="0">
+
                 <!-- STEP 1: Psychological Test -->
                 <div id="step1" class="step-content active">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div
-                            class="flex items-center justify-center w-14 h-14 bg-brand-100 rounded-full text-brand-600 shrink-0">
-                            <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
+                    
+                    <!-- [NEW] 虛擬店長歡迎區塊 (使用 avatar_welcome.jpg) -->
+                    <div class="flex flex-col items-center mb-8 relative">
+                        <!-- 圖片 -->
+                        <div class="w-32 h-32 rounded-full border-4 border-white shadow-xl overflow-hidden mb-4 relative z-10 bg-brand-100">
+                            <!-- 請確保 avatar_welcome.jpg 存在於您的 images 資料夾 -->
+                            <img src="https://randytsay.github.io/questionnaire/images/avatar_welcome.jpg" alt="耀文" class="w-full h-full object-cover object-top">
                         </div>
-                        <div>
-                            <h2 class="text-xl font-bold text-brand-700">潛意識購物測驗</h2>
-                            <p class="text-gray-600 text-sm">測出您的消費性格 & 2026 流年運勢！</p>
+                        
+                        <!-- 對話框 -->
+                        <div class="bg-white p-4 rounded-2xl shadow-md border border-gray-100 text-center relative -mt-8 pt-10 w-full animate-fade-in">
+                            <h2 class="text-xl font-bold text-brand-700 mb-1">嗨！我是耀文 👋</h2>
+                            <p class="text-gray-600 text-sm">歡迎來到行動商城！<br>讓我用 3 分鐘，幫您測出 <span class="text-brand-600 font-bold">2026 流年運勢</span> 吧！</p>
+                            <div class="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white rotate-45 border-l border-t border-gray-100"></div>
                         </div>
                     </div>
+                    <!-- 虛擬店長結束 -->
 
                     <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100">
                         <p class="text-xl font-bold text-brand-700 mb-6 text-center leading-relaxed">
@@ -243,7 +272,6 @@
                         </p>
                         <div class="space-y-3">
                             <label class="cursor-pointer group block">
-                                <!-- 修正：加入 name="psyChoice" 實作真正的單選行為 -->
                                 <input type="radio" name="psyChoice" value="visual" data-psy="visual"
                                     class="option-input" onchange="storePsyResult('visual')">
                                 <div
@@ -354,6 +382,7 @@
 
                     <!-- Shopping -->
                     <div class="mb-10">
+                        <input type="hidden" name="entry.1921616399_sentinel" value="">
                         <p class="text-lg font-bold text-brand-700 mb-4">平常都在哪裡購物？ <span
                                 class="text-red-500">*</span><span
                                 class="text-sm font-normal text-gray-500 ml-2">(可複選)</span></p>
@@ -436,6 +465,7 @@
 
                     <!-- Travel Freq -->
                     <div class="mb-10">
+                        <input type="hidden" name="entry.1954197687_sentinel" value="">
                         <p class="text-lg font-bold text-brand-700 mb-4">旅行偏好 <span class="text-red-500">*</span><span
                                 class="text-sm font-normal text-gray-500 ml-2">(可複選)</span></p>
                         <div class="flex flex-wrap gap-3 mb-4">
@@ -481,6 +511,7 @@
 
                     <!-- Travel Plan -->
                     <div>
+                        <input type="hidden" name="entry.1930263458_sentinel" value="">
                         <p class="text-lg font-bold text-brand-700 mb-4">旅行規劃方式 <span class="text-red-500">*</span><span
                                 class="text-sm font-normal text-gray-500 ml-2">(可複選)</span></p>
                         <div class="grid grid-cols-2 gap-3 mb-4">
@@ -558,6 +589,7 @@
 
                     <!-- Supplements -->
                     <div class="mb-10">
+                        <input type="hidden" name="entry.87245979_sentinel" value="">
                         <p class="text-lg font-bold text-brand-700 mb-4">您關注的保健需求？ <span
                                 class="text-red-500">*</span><span
                                 class="text-sm font-normal text-gray-500 ml-2">(可複選)</span></p>
@@ -707,6 +739,7 @@
 
                     <!-- Weight -->
                     <div>
+                        <input type="hidden" name="entry.72843877_sentinel" value="">
                         <p class="text-lg font-bold text-brand-700 mb-4">體重管理需求 <span class="text-red-500">*</span><span
                                 class="text-sm font-normal text-gray-500 ml-2">(可複選)</span></p>
                         <div class="space-y-2 mb-4">
@@ -837,6 +870,7 @@
 
                     <!-- Skin Type -->
                     <div class="mb-10 relative">
+                        <input type="hidden" name="entry.798701128_sentinel" value="">
                         <p class="text-lg font-bold text-brand-700 mb-4">您的肌膚屬性？ <span class="text-red-500">*</span></p>
                         <div class="flex flex-wrap gap-3" id="skin-type-group">
                             <label class="cursor-pointer">
@@ -880,6 +914,7 @@
 
                     <!-- Products -->
                     <div class="mb-10">
+                        <input type="hidden" name="entry.3439028_sentinel" value="">
                         <p class="text-lg font-bold text-brand-700 mb-4">會購買的護膚品？ <span
                                 class="text-red-500">*</span><span
                                 class="text-sm font-normal text-gray-500 ml-2">(可複選)</span></p>
@@ -967,6 +1002,7 @@
 
                     <!-- Makeup -->
                     <div>
+                        <input type="hidden" name="entry.582521907_sentinel" value="">
                         <p class="text-lg font-bold text-brand-700 mb-4">彩妝需求？ <span class="text-red-500">*</span><span
                                 class="text-sm font-normal text-gray-500 ml-2">(可複選)</span></p>
                         <div class="space-y-2 mb-4">
@@ -1014,6 +1050,7 @@
 
                     <!-- Baby -->
                     <div class="mb-10">
+                        <input type="hidden" name="entry.835140164_sentinel" value="">
                         <p class="text-lg font-bold text-brand-700 mb-4">家中有嬰幼兒用品需求嗎？ <span
                                 class="text-red-500">*</span><span
                                 class="text-sm font-normal text-gray-500 ml-2">(可複選)</span></p>
@@ -1061,6 +1098,7 @@
                     <div class="space-y-5">
                         <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 feedback-group"
                             id="feedback-1">
+                            <input type="hidden" name="entry.1155724814_sentinel" value="">
                             <p class="text-base font-bold text-gray-800 mb-3">喜歡群組「你問我找」的無壓力購物模式嗎？ <span
                                     class="text-red-500">*</span></p>
                             <div class="flex flex-col sm:flex-row gap-3">
@@ -1087,6 +1125,7 @@
 
                         <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 feedback-group"
                             id="feedback-2">
+                            <input type="hidden" name="entry.1228384346_sentinel" value="">
                             <p class="text-base font-bold text-gray-800 mb-3">物價飛漲，覺得生活不易或錢越來越難用？ <span
                                     class="text-red-500">*</span></p>
                             <div class="flex flex-col sm:flex-row gap-3">
@@ -1113,6 +1152,7 @@
 
                         <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 feedback-group"
                             id="feedback-3">
+                            <input type="hidden" name="entry.33216688_sentinel" value="">
                             <p class="text-base font-bold text-gray-800 mb-3">喜歡群組有人服務您網購嗎？ <span
                                     class="text-red-500">*</span></p>
                             <div class="flex flex-col sm:flex-row gap-3">
@@ -1139,6 +1179,7 @@
 
                         <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 feedback-group"
                             id="feedback-4">
+                            <input type="hidden" name="entry.2018998320_sentinel" value="">
                             <p class="text-base font-bold text-gray-800 mb-3">若有機會透過網路消費增加收入，您會有興趣嗎？ <span
                                     class="text-red-500">*</span></p>
                             <div class="flex flex-col sm:flex-row gap-3">
@@ -1193,19 +1234,24 @@
         <div
             class="relative bg-white rounded-3xl p-0 max-w-sm w-full shadow-2xl transform transition-all scale-100 overflow-hidden flex flex-col max-h-[90vh]">
 
-            <!-- Result Header -->
-            <div class="bg-gradient-to-br from-brand-600 to-brand-700 p-5 text-white shrink-0">
-                <div class="flex items-center gap-4">
-                    <div
-                        class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm shrink-0">
-                        <i class="fa-solid fa-star text-xl"></i>
+            <!-- [NEW] Result Header (使用 avatar_result.jpg) -->
+            <div class="bg-gradient-to-br from-brand-600 to-brand-700 p-5 text-white shrink-0 relative overflow-hidden">
+                <!-- 裝飾背景圓圈 -->
+                <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-10 -mt-10"></div>
+                
+                <div class="flex items-center gap-4 relative z-10">
+                    <!-- 把原本的 icon 換成頭像 -->
+                    <div class="w-16 h-16 rounded-full border-2 border-white/50 shadow-lg overflow-hidden shrink-0 bg-white">
+                        <!-- 請確保 avatar_result.jpg 存在於您的 images 資料夾 -->
+                        <img src="https://randytsay.github.io/questionnaire/images/avatar_result.jpg" alt="耀文" class="w-full h-full object-cover object-top">
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold">測驗結果揭曉！</h3>
-                        <p class="text-brand-100 text-xs">感謝填寫，這是您的專屬分析</p>
+                        <h3 class="text-xl font-bold text-white">分析完成！</h3>
+                        <p class="text-brand-100 text-xs mt-1">這是我根據大數據<br>為您整理的專屬報告 👇</p>
                     </div>
                 </div>
             </div>
+            <!-- Header 結束 -->
 
             <!-- Result Body (Scrollable) -->
             <div class="p-6 overflow-y-auto">
@@ -1346,7 +1392,6 @@
                 data._currentStep = currentStep;
                 data._psyChoice = userPsyChoice;
                 localStorage.setItem('surveyProgress', JSON.stringify(data));
-                // showSaveIndicator(); // Removed as requested
             } catch (error) {
                 console.error('自動儲存失敗:', error);
             }
@@ -1356,8 +1401,6 @@
             clearTimeout(autoSaveTimer);
             autoSaveTimer = setTimeout(autoSave, 500);
         }
-
-        // function showSaveIndicator() { ... } // Removed
 
         function restoreProgress() {
             try {
@@ -1413,7 +1456,7 @@
                 toast.style.opacity = '0';
                 toast.style.transform = 'translateY(-20px)';
                 setTimeout(() => toast.remove(), 300);
-            }, 2000); // Shortened duration from 3000 to 2000
+            }, 2000); 
         }
 
         function updateCompletion() {
@@ -1495,7 +1538,6 @@
                     isValid = false;
                 }
 
-                // Birthday validation (Required now based on label asterisk)
                 const year = document.getElementById('birth-year').value;
                 const month = document.getElementById('birth-month').value;
                 const day = document.getElementById('birth-day').value;
@@ -1507,7 +1549,6 @@
                     showToast('請完整輸入生日 (年/月/日)', 'warning');
                     isValid = false;
                 } else {
-                    // Basic range validation
                     const y = parseInt(year);
                     const m = parseInt(month);
                     const d = parseInt(day);
@@ -1526,21 +1567,18 @@
                 return isValid;
             }
             if (step === 3) {
-                // Check shopping venue
                 const shoppingChecked = document.querySelectorAll('input[name="entry.1921616399"]:checked');
                 const shoppingOther = document.querySelector('input[type="text"][name="entry.1921616399"]');
                 if (shoppingChecked.length === 0 && (!shoppingOther || !shoppingOther.value.trim())) {
                     showToast('請選擇購物場所', 'warning');
                     return false;
                 }
-                // Check travel preference
                 const travelPrefChecked = document.querySelectorAll('input[name="entry.1954197687"]:checked');
                 const travelPrefOther = document.querySelector('input[type="text"][name="entry.1954197687"]');
                 if (travelPrefChecked.length === 0 && (!travelPrefOther || !travelPrefOther.value.trim())) {
                     showToast('請選擇旅行偏好', 'warning');
                     return false;
                 }
-                // Check travel plan
                 const travelPlanChecked = document.querySelectorAll('input[name="entry.1930263458"]:checked');
                 const travelPlanOther = document.querySelector('input[type="text"][name="entry.1930263458"]');
                 if (travelPlanChecked.length === 0 && (!travelPlanOther || !travelPlanOther.value.trim())) {
@@ -1549,14 +1587,12 @@
                 }
             }
             if (step === 4) {
-                // Check health supplements
                 const healthChecked = document.querySelectorAll('input[name="entry.87245979"]:checked');
                 const healthOther = document.querySelector('input[type="text"][name="entry.87245979"]');
                 if (healthChecked.length === 0 && (!healthOther || !healthOther.value.trim())) {
                     showToast('請選擇保健需求', 'warning');
                     return false;
                 }
-                // Check weight management
                 const weightChecked = document.querySelectorAll('input[name="entry.72843877"]:checked');
                 if (weightChecked.length === 0) {
                     showToast('請選擇體重管理需求', 'warning');
@@ -1564,7 +1600,6 @@
                 }
             }
             if (step === 5) {
-                // Check decision style (新增)
                 if (!userDecisionStyle) {
                     const styleGroup = document.getElementById('decision-style-group');
                     styleGroup.classList.add('error-shake');
@@ -1574,7 +1609,6 @@
                 }
             }
             if (step === 6) {
-                // Check skin type (was Step 5)
                 const skinTypeChecked = document.querySelector('input[name="entry.798701128"]:checked');
                 if (!skinTypeChecked) {
                     const skinTypeGroup = document.getElementById('skin-type-group');
@@ -1584,14 +1618,12 @@
                     skinTypeGroup.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     return false;
                 }
-                // Check skincare products
                 const skincareChecked = document.querySelectorAll('input[name="entry.3439028"]:checked');
                 const skincareOther = document.querySelector('input[type="text"][name="entry.3439028"]');
                 if (skincareChecked.length === 0 && (!skincareOther || !skincareOther.value.trim())) {
                     showToast('請選擇護膚品', 'warning');
                     return false;
                 }
-                // Check makeup
                 const makeupChecked = document.querySelectorAll('input[name="entry.582521907"]:checked');
                 const makeupOther = document.querySelector('input[type="text"][name="entry.582521907"]');
                 if (makeupChecked.length === 0 && (!makeupOther || !makeupOther.value.trim())) {
@@ -1600,7 +1632,6 @@
                 }
             }
             if (step === 7) {
-                // Check baby products (was Step 6)
                 const babyChecked = document.querySelectorAll('input[name="entry.835140164"]:checked');
                 if (babyChecked.length === 0) {
                     showToast('請選擇嬰幼兒用品需求', 'warning');
@@ -1716,25 +1747,22 @@
                 textMinguo.classList.remove('text-brand-600', 'font-bold');
             }
 
-            // 清空年份重填以避免格式混亂
             yearInput.value = '';
             syncFullBirthday();
         }
 
         // ============ 新增：日期自動跳轉與同步 ============
         function handleDateAutoJump(currentEl, nextId) {
-            // 只保留數字
             currentEl.value = currentEl.value.replace(/\D/g, '');
 
-            let jumpLimit = 4; // 西元預設 4 碼
+            let jumpLimit = 4;
 
             if (currentEra === 'Minguo') {
                 const val = currentEl.value;
                 if (val.length > 0) {
-                    // 智慧跳轉：首位非 1 則 2 碼跳轉 (民國 20-99)，首位為 1 則 3 碼跳轉 (民國 100+)
                     jumpLimit = val[0] === '1' ? 3 : 2;
                 } else {
-                    jumpLimit = 2; // 預設 2 碼
+                    jumpLimit = 2;
                 }
             }
 
@@ -1753,12 +1781,10 @@
             if (yearVal && m && d) {
                 let y = parseInt(yearVal);
 
-                // 如果是民國年，轉換為西元
                 if (currentEra === 'Minguo') {
                     y += 1911;
                 }
 
-                // Google Form 接受的日期格式通常為 YYYY-MM-DD
                 document.getElementById('input-birthday').value = `${y}-${m}-${d}`;
             } else {
                 document.getElementById('input-birthday').value = '';
@@ -1777,10 +1803,8 @@
             btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i>分析中...';
             btn.disabled = true;
 
-            // Disable psych test inputs so they are not submitted
             document.querySelectorAll('input[data-psy]').forEach(el => el.disabled = true);
 
-            // Disable empty "Other" text inputs to avoid sending empty values
             document.querySelectorAll('input[type="text"][name^="entry."]').forEach(input => {
                 if (!input.value.trim()) {
                     input.disabled = true;
@@ -1789,7 +1813,6 @@
 
             handleFormSubmit();
 
-            // Use fetch API with no-cors mode
             const form = document.getElementById('surveyForm');
             const formData = new FormData(form);
 
@@ -1798,11 +1821,9 @@
                 mode: 'no-cors',
                 body: formData
             }).then(() => {
-                // no-cors mode always returns opaque response, so we assume success
                 showSuccessModal();
             }).catch(err => {
                 console.error('Submit error:', err);
-                // Fallback: try iframe method
                 setTimeout(() => {
                     submitted = true;
                     form.submit();
@@ -1955,11 +1976,9 @@
         }
 
         function generateResults() {
-            // 1. 潛意識分析
             const psyText = getPsyText(userPsyChoice);
             document.getElementById('result-psy').innerText = psyText;
 
-            // 2. 消費決策風格
             const decisionStyleSection = document.getElementById('decision-style-section');
             if (userDecisionStyle) {
                 decisionStyleSection.style.display = 'block';
@@ -1971,19 +1990,16 @@
                 decisionStyleSection.style.display = 'none';
             }
 
-            // 3. 生命靈數與流年
             const birthDate = document.getElementById('input-birthday').value;
             const numerologySection = document.getElementById('numerology-section');
 
             if (birthDate) {
-                // Show numerology section and fill in data
                 numerologySection.style.display = 'block';
                 const lifePathNum = calculateLifePath(birthDate);
                 const personalYearNum = calculatePersonalYear2026(birthDate);
 
                 document.getElementById('life-path-num').innerText = lifePathNum;
 
-                // 融合決策風格與生命靈數
                 let personalityText = getNumerologyPersonality(lifePathNum);
                 if (userDecisionStyle) {
                     const combinedInsight = getCombinedInsight(userDecisionStyle, lifePathNum);
@@ -1992,7 +2008,6 @@
                 document.getElementById('result-personality').innerText = personalityText;
                 document.getElementById('result-numerology').innerText = getNumerologyText(personalYearNum);
             } else {
-                // Hide numerology section if no birthday
                 numerologySection.style.display = 'none';
             }
         }
@@ -2002,20 +2017,18 @@
         }
 
         function showSuccessModal() {
-            // Prevent double-showing if called by both iframe onload and safety timeout
             if (!isSubmitting) return;
 
             document.getElementById('successModal').classList.remove('hidden');
 
             localStorage.removeItem('surveyProgress');
 
-            // Re-enable inputs for reset
             document.querySelectorAll('input[data-psy]').forEach(el => el.disabled = false);
 
             document.getElementById('surveyForm').reset();
             currentStep = 1;
             userPsyChoice = '';
-            isSubmitting = false; // Reset state
+            isSubmitting = false;
 
             document.querySelectorAll('.border-error').forEach(el => el.classList.remove('border-error'));
             document.querySelectorAll('.ring-2').forEach(el => el.classList.remove('ring-2', 'ring-red-500', 'border-red-500'));
