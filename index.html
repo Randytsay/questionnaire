@@ -1456,7 +1456,7 @@
                 toast.style.opacity = '0';
                 toast.style.transform = 'translateY(-20px)';
                 setTimeout(() => toast.remove(), 300);
-            }, 2000); 
+            }, 800); 
         }
 
         function updateCompletion() {
@@ -1751,27 +1751,53 @@
             syncFullBirthday();
         }
 
-        // ============ 新增：日期自動跳轉與同步 ============
         function handleDateAutoJump(currentEl, nextId) {
+            // 1. 只保留數字
             currentEl.value = currentEl.value.replace(/\D/g, '');
+            const val = currentEl.value;
+            let shouldJump = false;
 
-            let jumpLimit = 4;
+            // 2. 判斷是哪一個欄位
+            if (currentEl.id === 'birth-year') {
+                // --- 年份邏輯 (處理民國/西元) ---
+                let jumpLimit = 4; // 西元預設 4 碼
+                if (currentEra === 'Minguo') {
+                    if (val.length > 0) {
+                        // 民國年：首位非 1 則 2 碼跳轉 (民國 20-99)，首位為 1 則 3 碼跳轉 (民國 100+)
+                        jumpLimit = val[0] === '1' ? 3 : 2;
+                    } else {
+                        jumpLimit = 2;
+                    }
+                }
+                if (val.length >= jumpLimit) shouldJump = true;
 
-            if (currentEra === 'Minguo') {
-                const val = currentEl.value;
-                if (val.length > 0) {
-                    jumpLimit = val[0] === '1' ? 3 : 2;
-                } else {
-                    jumpLimit = 2;
+            } else if (currentEl.id === 'birth-month') {
+                // --- 月份邏輯 (新增優化) ---
+                // 規則 A: 輸入滿 2 碼 (例如 12) -> 跳轉
+                // 規則 B: 輸入 1 碼且數字大於 1 (例如 2,3...9) -> 自動跳轉 (因為月份不可能以 2-9 開頭卻還有第二位)
+                if (val.length >= 2 || (val.length === 1 && parseInt(val) > 1)) {
+                    shouldJump = true;
+                }
+
+            } else {
+                // --- 日期或其他欄位 (預設 2 碼) ---
+                if (val.length >= 2) shouldJump = true;
+            }
+
+            // 3. 執行跳轉
+            if (shouldJump) {
+                const nextEl = document.getElementById(nextId);
+                if (nextEl) {
+                    nextEl.focus();
+                    // 如果是跳轉過去的，建議全選內容，方便使用者修改 (可選)
+                    // nextEl.select(); 
                 }
             }
-
-            if (currentEl.value.length >= jumpLimit) {
-                const nextEl = document.getElementById(nextId);
-                if (nextEl) nextEl.focus();
-            }
+            
+            // 4. 同步資料到隱藏欄位
             syncFullBirthday();
-        }
+        }        
+
 
         function syncFullBirthday() {
             const yearVal = document.getElementById('birth-year').value;
@@ -2049,3 +2075,4 @@
 </body>
 
 </html>
+
