@@ -201,7 +201,7 @@
             <div class="flex justify-between items-center mb-2">
                 <span class="text-xs font-semibold text-brand-600 tracking-wider">耀文行動商城</span>
                 <div class="flex items-center gap-3">
-                    <span class="text-xs font-medium text-gray-400" id="step-indicator">Step 1/6</span>
+                    <span class="text-xs font-medium text-gray-400" id="step-indicator">Step 1/7</span>
                     <!-- Completion Percentage -->
                     <div class="flex items-center gap-1">
                         <svg width="24" height="24" class="transform -rotate-90">
@@ -455,9 +455,14 @@
                         <div
                             class="bg-gradient-to-r from-gray-50 to-white p-3 rounded-lg border border-dashed border-gray-300 flex items-center">
                             <span class="text-gray-500 text-sm mr-2 shrink-0 font-medium">💭 想到其他的嗎？</span>
-                            <input type="text" name="entry.1921616399"
+                            <!-- [FIXED] 隱藏的 checkbox，用來觸發 "其他" 選項 -->
+                            <input type="checkbox" name="entry.1921616399" value="__other_option__" id="other-shop" class="hidden">
+                            
+                            <!-- [FIXED] 文字框 name 加上 .other_option_response，並加入 oninput 自動勾選邏輯 -->
+                            <input type="text" name="entry.1921616399.other_option_response"
                                 class="other-input w-full bg-transparent border-b border-gray-300 outline-none text-base text-gray-700 py-1"
-                                placeholder="歡迎告訴我們...">
+                                placeholder="歡迎告訴我們..."
+                                oninput="document.getElementById('other-shop').checked = (this.value.trim() !== '')">
                         </div>
                     </div>
 
@@ -501,9 +506,11 @@
                         <div
                             class="bg-gradient-to-r from-gray-50 to-white p-3 rounded-lg border border-dashed border-gray-300 flex items-center">
                             <span class="text-gray-500 text-sm mr-2 shrink-0 font-medium">💭 想到其他的嗎？</span>
-                            <input type="text" name="entry.1954197687"
+                            <input type="checkbox" name="entry.1954197687" value="__other_option__" id="other-travel-pref" class="hidden">
+                            <input type="text" name="entry.1954197687.other_option_response"
                                 class="other-input w-full bg-transparent border-b border-gray-300 outline-none text-base text-gray-700 py-1"
-                                placeholder="歡迎告訴我們...">
+                                placeholder="歡迎告訴我們..."
+                                oninput="document.getElementById('other-travel-pref').checked = (this.value.trim() !== '')">
                         </div>
                     </div>
 
@@ -574,9 +581,11 @@
                         </div>
                         <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 flex items-center">
                             <span class="text-gray-500 text-sm mr-2 shrink-0 font-medium">其他：</span>
-                            <input type="text" name="entry.1930263458"
+                            <input type="checkbox" name="entry.1930263458" value="__other_option__" id="other-travel-plan" class="hidden">
+                            <input type="text" name="entry.1930263458.other_option_response"
                                 class="other-input w-full bg-transparent border-b border-gray-300 outline-none text-base text-gray-700 py-1"
-                                placeholder="請輸入...">
+                                placeholder="請輸入..."
+                                oninput="document.getElementById('other-travel-plan').checked = (this.value.trim() !== '')">
                         </div>
                     </div>
                 </div>
@@ -729,9 +738,11 @@
                         </div>
                         <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 flex items-center">
                             <span class="text-gray-500 text-sm mr-2 shrink-0 font-medium">其他：</span>
-                            <input type="text" name="entry.87245979"
+                            <input type="checkbox" name="entry.87245979" value="__other_option__" id="other-supplements" class="hidden">
+                            <input type="text" name="entry.87245979.other_option_response"
                                 class="other-input w-full bg-transparent border-b border-gray-300 outline-none text-base text-gray-700 py-1"
-                                placeholder="請輸入...">
+                                placeholder="請輸入..."
+                                oninput="document.getElementById('other-supplements').checked = (this.value.trim() !== '')">
                         </div>
                     </div>
 
@@ -784,9 +795,11 @@
                         <div
                             class="bg-gradient-to-r from-gray-50 to-white p-3 rounded-lg border border-dashed border-gray-300 flex items-center">
                             <span class="text-gray-500 text-sm mr-2 shrink-0 font-medium">💭 想到其他的嗎？</span>
-                            <input type="text" name="entry.72843877"
+                            <input type="checkbox" name="entry.72843877" value="__other_option__" id="other-weight" class="hidden">
+                            <input type="text" name="entry.72843877.other_option_response"
                                 class="other-input w-full bg-transparent border-b border-gray-300 outline-none text-base text-gray-700 py-1"
-                                placeholder="歡迎告訴我們...">
+                                placeholder="歡迎告訴我們..."
+                                oninput="document.getElementById('other-weight').checked = (this.value.trim() !== '')">
                         </div>
                     </div>
                 </div>
@@ -992,9 +1005,11 @@
                         </div>
                         <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 flex items-center">
                             <span class="text-gray-500 text-sm mr-2 shrink-0 font-medium">其他：</span>
-                            <input type="text" name="entry.3439028"
+                            <input type="checkbox" name="entry.3439028" value="__other_option__" id="other-skincare" class="hidden">
+                            <input type="text" name="entry.3439028.other_option_response"
                                 class="other-input w-full bg-transparent border-b border-gray-300 outline-none text-base text-gray-700 py-1"
-                                placeholder="請輸入...">
+                                placeholder="請輸入..."
+                                oninput="document.getElementById('other-skincare').checked = (this.value.trim() !== '')">
                         </div>
                     </div>
 
@@ -1035,9 +1050,11 @@
                         <div
                             class="bg-gradient-to-r from-gray-50 to-white p-3 rounded-lg border border-dashed border-gray-300 flex items-center">
                             <span class="text-gray-500 text-sm mr-2 shrink-0 font-medium">💭 想到其他的嗎？</span>
-                            <input type="text" name="entry.582521907"
+                            <input type="checkbox" name="entry.582521907" value="__other_option__" id="other-makeup" class="hidden">
+                            <input type="text" name="entry.582521907.other_option_response"
                                 class="other-input w-full bg-transparent border-b border-gray-300 outline-none text-base text-gray-700 py-1"
-                                placeholder="歡迎告訴我們...">
+                                placeholder="歡迎告訴我們..."
+                                oninput="document.getElementById('other-makeup').checked = (this.value.trim() !== '')">
                         </div>
                     </div>
                 </div>
@@ -1086,9 +1103,11 @@
                         </div>
                         <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 flex items-center">
                             <span class="text-gray-500 text-sm mr-2 shrink-0 font-medium">其他：</span>
-                            <input type="text" name="entry.835140164"
+                            <input type="checkbox" name="entry.835140164" value="__other_option__" id="other-baby" class="hidden">
+                            <input type="text" name="entry.835140164.other_option_response"
                                 class="other-input w-full bg-transparent border-b border-gray-300 outline-none text-base text-gray-700 py-1"
-                                placeholder="請輸入...">
+                                placeholder="請輸入..."
+                                oninput="document.getElementById('other-baby').checked = (this.value.trim() !== '')">
                         </div>
                     </div>
 
@@ -2073,5 +2092,6 @@
 </body>
 
 </html>
+
 
 
